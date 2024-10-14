@@ -44,8 +44,8 @@ plugs into the header pins. These are small and delicate pieces, but it's not to
 
 ## Install and configuration
 
-Now all that all the pieces are together, we can plug it in and install the image. Credit to https://github.com/jayofelony/pwnagotchi who has
-kept the project active and is the source for stable releases.
+Now that all of the pieces are together, we can plug it in and install the image. Credit to https://github.com/jayofelony/pwnagotchi who has
+kept the project active and is the source for the most recent stable release.
 
 - Download the image file https://github.com/jayofelony/pwnagotchi
 - Write the image to the SD card (Pi imager, Balena etcher)
