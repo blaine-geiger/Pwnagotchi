@@ -104,5 +104,5 @@ There are different methods to get the pcap files off the device. You can use a 
   <br/>
   <img src="https://imgur.com/emJEgKR.jpg" height="80%" width="80%" alt="finished-build"/><br /><br />
 </p>
-
+You can see the I/O ports and access windows in the image above.  
 Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. This project is meant for ethical hacking purposes, education, and analysis. I do not condone using this device or knowledge in malicious manner.
