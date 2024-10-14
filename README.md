@@ -5,7 +5,7 @@
 ### Description
 
 The Pwnagotchi is based on a "digital pet"  from the late 1990s called "Tamagotchi". The original toy was a
-handheld device that emulated a real pets needs. In turn the pet would grow and express its feelings to the user.
+handheld device that emulated a real pet's needs. In turn the virtual pet would grow and express its feelings to the user.
 It needed to be fed to be happy, and that is the main similarity, as we will see.
 
 The Pwnagotchi eats WPA handshakes, and that makes it a happy :) pet. It is built with a Raspberry Pi Zero WH running
@@ -105,4 +105,4 @@ There are different methods to get the pcap files off the device. You can use a 
   <img src="https://imgur.com/emJEgKR.jpg" height="80%" width="80%" alt="finished-build"/><br /><br />
 </p>
 
-Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. This project is meant for ethical hacking purpose of education and study. I do not condone using this device or knowledge in malicious manner.
+Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. This project is meant for ethical hacking purposes, education, and analysis. I do not condone using this device or knowledge in malicious manner.
