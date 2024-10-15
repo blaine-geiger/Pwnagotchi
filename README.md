@@ -16,7 +16,7 @@ into .pcap files for later examination and password cracking with Wireshark, .
 The entire process is automated. It doesn't require any user input. It just sniffs and eats. It only works on 2.4GHz (on the
 Pi Zero W, using other hardware can pull 5GHz) but as you should know, a lot of devices use the 2.4GHz bandwidth. It also uses a reinforcement learning model with rewards, value of rewards, decisions, and action plans based on previously recorded data. This is a short comic strip to help explain https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752 .
 
-Let's get into the build though.
+Let's get into building.
 
 ### Building
 
@@ -24,9 +24,9 @@ Parts list:
 - USB SD card adapter
 - Raspberry Pi Zero WH (Wi-Fi and pre-soldered Headers)
 - SD card (SanDisk 64G, overkill probably)
-- Waveshare eInk 2.13" (mine is V4, it works, you can't get older versions anyway)
-- PiSugar 2 1200mAh Battery (you can use a power bank also)
-- Casing (3D printed - many available - or print your own)
+- Waveshare eInk 2.13" (mine is V4, it works, older versions are hard to obtain)
+- PiSugar 2 1200mAh Battery (you can also use a power bank)
+- Casing (3D printed - many are available online - or print your own)
 
 <p align="center">Beginning top left clockwise: Screen, SD card USB adapter, Pi Zero WH, SD card, Pi Sugar2 battery 
   <br/>
