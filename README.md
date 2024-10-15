@@ -58,7 +58,6 @@ kept the project active and is the source for the most recent stable release.
    	- There are a lot of configuration options, see this [reference](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml) for more detail.
      
 - You can also run the device in a headless configuration and connect to your phone via Bluetooth
-- Connection by bluetooth tethering to your phone is also possible
 
 ### Web GUI
 
