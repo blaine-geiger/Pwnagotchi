@@ -4,37 +4,35 @@
 
 ### Description
 
-The Pwnagotchi is based on a "digital pet"  from the late 1990s called "Tamagotchi". The original toy was a
+The Pwnagotchi is inspired by the "digital pet"  from the late 1990s called the "Tamagotchi". The original toy was a
 handheld device that emulated a real pet's needs. In turn the virtual pet would grow and express its feelings to the user.
 It needed to be fed to be happy, and that is the main similarity, as we will see.
 
 The Pwnagotchi eats WPA handshakes, and that makes it a happy :) pet. It is built with a Raspberry Pi Zero WH running
 a full Linux system utilizing Bettercap to fulfill its purpose. It scans for Wi-Fi networks, attempts to deauthenticate
 associated devices, captures WPA handshakes as those devices try to reconnect, and saves all that handshake information
-into .pcap files for later examination and password cracking with Wireshark, .
+in `.pcap` files for later examination and password cracking with Wireshark, .
 
 The entire process is automated. It doesn't require any user input. It just sniffs and eats. It only works on 2.4GHz (on the
-Pi Zero W, using other hardware can pull 5GHz) but as you should know, a lot of devices use the 2.4GHz bandwidth. It also uses a reinforcement learning model with rewards, value of rewards, decisions, and action plans based on previously recorded data. This is a short comic strip to help explain https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752 .
+Pi Zero W, using other hardware can pull 5GHz) but as you should know, a lot of devices use the 2.4GHz frequency. It even employs a 
+reinforcement learning model to optimize its behavior based on prior data, which is explained further [here](https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752).
 
-Let's get into building.
-
-### Building
-
+### Building the Device
 Parts list:
 - USB SD card adapter
-- Raspberry Pi Zero WH (Wi-Fi and pre-soldered Headers)
+- Raspberry Pi Zero WH (with Wi-Fi and pre-soldered Headers)
 - SD card (SanDisk 64G, overkill probably)
 - Waveshare eInk 2.13" (mine is V4, it works, older versions are hard to obtain)
-- PiSugar 2 1200mAh Battery (you can also use a power bank)
-- Casing (3D printed - many are available online - or print your own)
+- PiSugar 2 1200mAh Battery (or a power bank)
+- Casing (3D printed - many designs are available online - or print your own)
 
 <p align="center">Beginning top left clockwise: Screen, SD card USB adapter, Pi Zero WH, SD card, Pi Sugar2 battery 
   <br/>
   <img src="https://imgur.com/mR0FWTo.jpg" height="80%" width="80%" alt="parts"/><br /><br />
 </p>
 
-There are 3 parts to the sandwich here. The pi attaches to the battery interface and screws in place. Then the screen
-plugs into the header pins. These are small and delicate pieces, but it's not too bad if you take your time and don't force things. I made sure not to press hard on the eInk screen, as it may damage its functionality. I connected the pi board and battery together first, then placed the screen face down to distribute pressure evenly while inserting the header pins into the screen interface. It all needs to fit firmly together to fit snugly inside the case.
+To assemble, attach the pi board to the battery interface and screw it in place. Then plug the screen into the header pins. Take care with the small and delicate components. I made sure not to press hard on the eInk screen, 
+as it may damage its functionality. I placed the screen face down on a mouse pad to distribute pressure evenly while carefully inserting the header pins into the screen. It all needs to fit firmly together to fit snugly inside the case.
 
 <p align="center">Components from top, moving down: screen, pi board, battery pack.
   <br/>
@@ -44,24 +42,23 @@ plugs into the header pins. These are small and delicate pieces, but it's not to
 
 ## Install and configuration
 
-Now that all of the pieces are together, we can plug it in and install the image. Credit to https://github.com/jayofelony/pwnagotchi who has
+Credit to [jayofelony](https://github.com/jayofelony/pwnagotchi) who has
 kept the project active and is the source for the most recent stable release.
 
-- Download the image file https://github.com/jayofelony/pwnagotchi
-- Write the image to the SD card (Pi imager, Balena etcher)
-- Get some drivers so we can SSH into the device 
+### Download and Write the Image:
+   - Download the image file [at this github page](https://github.com/jayofelony/pwnagotchi)
+   - Write the image to the SD card using Pi imager or Balena Etcher
+### Setup the Network and SSH:
 - Set the IP and mask (10.0.0.1 /24)
-- SSH into the device (PuTTY, Powershell) with default credentials which we will change
-- Make some changes to the configuration file found in /etc/pwnagotchi/config.toml
-	- naming the device, language
-	- whitelist any WAP you don't want to attack
-	- enable display, type of display, color
-	- too many config choices to list, see this reference https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml
-	
-- You can also run the device in a headless configuration
+   - SSH into the device (PuTTY, Powershell) with default credentials which we will change
+### Edit the Configuration File `etc/pwnagotchi/config.toml`:
+   - Name the device, choose language
+   - Whitelist any WAP you don't want to attack
+   	- Enable display and set type of display
+   	- There are a lot of configuration options, see this [reference](https://github.com/evilsocket/pwnagotchi/blob/master/pwnagotchi/defaults.toml)
+     
+- You can also run the device in a headless configuration and connect to your phone via Bluetooth
 - Connection by bluetooth tethering to your phone is also possible
-- Antenna modification can be accomplished by soldering directly to the board or possibly with USB connection (some report success)
-	- This provides much better reception for sniffing
 
 ### Web GUI
 
@@ -74,7 +71,8 @@ There is a web UI at http://10.0.0.2:8080/
 There is also a Bettercap UI at http://10.0.0.2:80/
 
 ### Placing inside the case
-Placing the device inside of the case I chose was a tight fit. I used paper to protect the screen from scratches while sliding it into place. Also be careful with the ribbon cable, it is very fragile.
+Placing the device inside of the case I chose was a tight fit. I used paper to protect the screen from scratches while sliding it into place.
+> **Note**: Be careful with the ribbon cable, it is very fragile.
 
 <p align="center">Assembled components inside the casing.
  <br/>
@@ -83,20 +81,21 @@ Placing the device inside of the case I chose was a tight fit. I used paper to p
 
 ## Cracking methods
 
-There are different methods to get the pcap files off the device. You can use a tool like FileZilla for a GUI to explore the device in a more user friendly way. The handshake files are found in /root/handshakes/ . You can then copy them to your PC, move them to a Kali VM if you don't already have an active Kali environment spun up. Now you can search through Wireshark and the files for more detail, which can betime consuming.
+There are different methods to get the `.pcap` files off the device. You can use a tool like FileZilla that offers a GUI to explore the device's files more easily. 
+The handshake files are found in `/root/handshakes/`. Copy these to your PC or transfer them to a Kali VM if you have one available. Now you can analyze the files in Wireshark for more detail, though
+it can be time consuming.
 
-- You can also use hcxpcapngtool that will convert this information for you.
-- 'hcxpcapngtool -o hash.hc22000 ./handshakes/*.pcap' this statement is explained below:
-	- hcxpcap tool name
-	- output command and file name in hashcat form
-	- carry out action in handshakes directory
-	- wildcard for any .pcap file there, regardless of name
-- You are going to want a good GPU for cracking, or a cloud VM
+- You can also use the `hcxpcapngtool` that will convert this information for you.
+- `hcxpcapngtool -o hash.hc22000 ./handshakes/*.pcap` this statement is explained below:
+	- `hcxpcapngtool`: Tool for conversion
+	- `-o hash.hc22000`: Output file in hashcat format
+	- `./handshakes/*.pcap`: Input directory for `.pcap` files
+- A powerful GPU or Cloud VM is recommended for cracking WPA passwords
 - Password lists
 	- WPA lists at https://www.weakpass.com
 		- 'Super WPA' list 11GB
 		- 'All-In-One-WiFi' list 134GB
-		- You can also build your own custom wordlists in Kali and combine into custom wordlists
+	- You can also build your own custom wordlists in Kali and combine into custom wordlists
  
 
 ## Finished build
@@ -105,4 +104,4 @@ There are different methods to get the pcap files off the device. You can use a 
   <img src="https://imgur.com/emJEgKR.jpg" height="80%" width="80%" alt="finished-build"/><br /><br />
 </p>
 You can see the I/O ports and access windows in the image above.  
-Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. This project is meant for ethical hacking purposes, education, and analysis. I do not condone using this device or knowledge in malicious manner.
+Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. This project is meant for ethical hacking purposes, education, and analysis. I do not condone using this device or knowledge for malicious purposes.
