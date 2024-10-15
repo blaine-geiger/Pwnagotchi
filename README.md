@@ -50,7 +50,7 @@ kept the project active and is the source for the most recent stable release.
    - Write the image to the SD card using Pi imager or Balena Etcher
 ### Setup the Network and SSH:
 - Set the IP and mask (10.0.0.1 /24)
-   - SSH into the device (PuTTY, Powershell) with default credentials which we will change
+   - SSH into the device (PuTTY, Powershell) with default credentials which will be changed later
 ### Edit the Configuration File `etc/pwnagotchi/config.toml`:
    - Name the device, choose language
    - Whitelist any WAP you don't want to attack
