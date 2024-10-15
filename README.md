@@ -92,7 +92,7 @@ it can be time consuming.
 	- `./handshakes/*.pcap`: Input directory for `.pcap` files
 - A powerful GPU or Cloud VM is recommended for cracking WPA passwords
 - Password lists
-	- WPA lists at https://www.weakpass.com
+	- WPA password lists can be found [here](https://www.weakpass.com).
 		- 'Super WPA' list 11GB
 		- 'All-In-One-WiFi' list 134GB
 	- You can also build your own custom wordlists in Kali and combine into custom wordlists
