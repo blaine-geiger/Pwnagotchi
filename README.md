@@ -11,9 +11,9 @@ It needed to be fed to be happy, and that is the main similarity, as we will see
 The Pwnagotchi eats WPA handshakes, and that makes it a happy :) pet. It is built with a Raspberry Pi Zero WH running
 a full Linux system utilizing Bettercap to fulfill its purpose. It scans for Wi-Fi networks, attempts to deauthenticate
 associated devices, captures WPA handshakes as those devices try to reconnect, and saves all that handshake information
-in `.pcap` files for later examination and password cracking with Wireshark, .
+in `.pcap` files for later examination with Wireshark and password cracking with other tools.
 
-The entire process is automated. It doesn't require any user input. It just sniffs and eats. It only works on 2.4GHz (on the
+The entire process carried out by the device is automated. It does not require any user input. It just sniffs and eats. It only works on 2.4GHz (on the
 Pi Zero W, using other hardware can pull 5GHz) but as you should know, a lot of devices use the 2.4GHz frequency. It even employs a 
 reinforcement learning model to optimize its behavior based on prior data, which is explained further [here](https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752).
 
