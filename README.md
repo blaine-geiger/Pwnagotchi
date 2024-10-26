@@ -80,7 +80,7 @@ Placing the device inside of the case I chose was a tight fit. I used paper to p
 
 ## Cracking methods
 
-There are different methods to get the `.pcap` files off the device. You can use a tool like FileZilla that offers a GUI to explore the device's files more easily. 
+There are different methods to get the `.pcap` files off the device. You can use a tool like FileZilla that offers a GUI to explore the device's files easily. 
 The handshake files are found in `/root/handshakes/`. Copy these to your PC or transfer them to a Kali VM if you have one available. Now you can analyze the files in Wireshark for more detail, though
 it can be time consuming.
 
