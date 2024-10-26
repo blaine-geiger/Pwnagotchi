@@ -26,7 +26,7 @@ Parts list:
 - PiSugar 2 1200mAh Battery (or a power bank)
 - Casing (3D printed - many designs are available online - or print your own)
 
-<p align="center">Beginning top left clockwise: Screen, SD card USB adapter, Pi Zero WH, SD card, Pi Sugar2 battery 
+<p align="center">Clockwise from top left: Screen, SD card USB adapter, Pi Zero WH, SD card, Pi Sugar2 battery 
   <br/>
   <img src="https://imgur.com/mR0FWTo.jpg" height="80%" width="80%" alt="parts"/><br /><br />
 </p>
