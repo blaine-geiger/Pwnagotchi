@@ -27,16 +27,18 @@ Parts list:
 - Casing (3D printed - many designs are available online - or print your own)
 
 <p align="center">Clockwise from top left: Screen, SD card USB adapter, Pi Zero WH, SD card, Pi Sugar2 battery 
-  <br/>
-  <img src="https://i.imgur.com/mR0FWTo.jpg" height="80%" width="80%" alt="needed parts"/><br /><br />
+	
+![parts](https://github.com/user-attachments/assets/b8183f09-e120-4e21-a042-59491de84dc4)
+
 </p>
 
 To assemble, attach the pi board to the battery interface and screw it in place. Then plug the screen into the header pins. Take care with the small and delicate components. I made sure not to press hard on the eInk screen, 
 as it may damage its functionality. I placed the screen face down on a mouse pad to distribute pressure evenly while carefully inserting the header pins into the screen. It all needs to fit firmly together to fit snugly inside the case.
 
 <p align="center">Components from top, moving down: screen, pi board, battery pack.
-  <br/>
-  <img src="https://i.imgur.com/R8rlUZi.jpg" height="80%" width="80%" alt="assembled parts"/><br /><br />
+	
+![parts_together](https://github.com/user-attachments/assets/5a912464-964f-4caa-8f8e-95f321497328)
+
 </p>
 
 
@@ -74,8 +76,9 @@ Placing the device inside of the case I chose was a tight fit. I used paper to p
 > **Note**: Be careful with the ribbon cable, it is very fragile.
 
 <p align="center">Assembled components inside the casing.
- <br/>
-  <img src="https://i.imgur.com/VsxKy1m.jpg" height="80%" width="80%" alt="parts inside case"/><br /><br />
+
+![parts_in_case](https://github.com/user-attachments/assets/6eeec87c-ab06-49b0-961c-89cfde575c06)
+
 </p>
 
 ## Cracking methods
@@ -99,8 +102,10 @@ it can be time consuming.
 
 ## Finished build
 <p align="center"> Looks can be deceiving
-  <br/>
-  <img src="https://i.imgur.com/emJEgKR.jpg" height="80%" width="80%" alt="finished build"/><br /><br />
+
+![finished_build](https://github.com/user-attachments/assets/ab9d369d-ef6c-4880-97f3-56f7fd41c4ad)
+
 </p>
+
 You can see the I/O ports and access windows in the image above.  
 Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. This project is meant for ethical hacking purposes, education, and analysis. I do not condone using this device or knowledge for malicious purposes.
