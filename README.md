@@ -107,5 +107,7 @@ it can be time consuming.
 
 </p>
 
-You can see the I/O ports and access windows in the image above.  
-Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. This project is meant for ethical hacking purposes, education, and analysis. I do not condone using this device or knowledge for malicious purposes.
+You can see the I/O ports and access windows in the image above.
+
+Credit goes to all of the developers who worked on the device. This project reflects building and studying the device. 
+>Note: This project is meant for ethical hacking purposes, education, and analysis. I do not condone using this device or knowledge for malicious purposes.
